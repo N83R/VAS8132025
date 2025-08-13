@@ -926,3 +926,129 @@ html, body { overflow-x: hidden; }
   /* when toggled open */
   #site-nav.open { max-height:70vh; }
 }
+
+/* =========================================================
+   RESPONSIVE HERO BANNERS (override block)
+   Applies to: .page-hero, .mapping-hero, .spraying-hero,
+               .quotes-hero, .inspection-hero
+   ========================================================= */
+
+/* Shared hero behavior */
+.page-hero {
+  position: relative;
+  /* Let height scale with device using modern viewport units (svh handles mobile browser UI) */
+  min-height: clamp(240px, 48svh, 680px);
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--light);
+  text-align: center;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* Disable fixed background on mobile to avoid jumpiness */
+  background-attachment: scroll;
+
+  overflow: hidden;
+}
+
+/* Slightly taller on wider screens */
+@media (min-width: 900px) {
+  .page-hero {
+    min-height: clamp(420px, 56vh, 760px);
+  }
+}
+
+/* Uniform overlay for legibility over photos */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.28); /* tweak 0.22–0.35 to taste */
+  z-index: 0;
+}
+
+/* Content wrapper stays above overlay */
+.page-hero .overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 980px;
+  padding-inline: clamp(12px, 3vw, 32px);
+}
+
+/* Scalable type that won’t overflow on phones */
+.page-hero h1 {
+  font-size: clamp(1.6rem, 5vw, 3.1rem);
+  line-height: 1.12;
+  margin: 0 0 .45em;
+  text-wrap: balance;
+}
+
+.page-hero p {
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  line-height: 1.45;
+  max-width: 70ch;
+  margin-inline: auto;
+  padding-inline: clamp(0px, 2vw, 12px);
+  /* keep your readable glow on dark images */
+  text-shadow: 0.6px 0.9px 6px rgba(0,0,0,.95);
+}
+
+/* iOS Safari fix: ensure no "sticky" parallax behavior */
+@supports (-webkit-touch-callout: none) {
+  .page-hero { background-attachment: scroll; }
+}
+
+/* If you have a video hero element, keep it fully covered */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* stays under .overlay */
+}
+
+/* ---------- Per-page hero images (centralized here) ---------- */
+.mapping-hero    { background-image: url('grade_map.png'); }
+.spraying-hero   { background-image: url('t40.jpg'); }
+.quotes-hero     { background-image: url('spray drone.jpg'); }
+.inspection-hero { background-image: url('Inspection.png'); }
+
+/* Optional: fine-tune on very small phones */
+@media (max-width: 600px) {
+  .page-hero { min-height: clamp(220px, 45svh, 560px); }
+  .page-hero p { max-width: 60ch; }
+}
+
+/* Optional: a touch brighter for very dark photos on mobile */
+@media (max-width: 600px) {
+  .page-hero::before { background: rgba(0,0,0,.24); }
+}
+
+/* Restore parallax (fixed background) on desktop only */
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .page-hero {
+    background-attachment: fixed;
+    min-height: clamp(480px, 62vh, 820px); /* a bit taller for the effect */
+  }
+}
+
+/* iOS Safari & touch devices: force non-parallax to avoid jank */
+@supports (-webkit-touch-callout: none) {
+  .page-hero {
+    background-attachment: scroll !important;
+  }
+}
+
+/* If any page feels too dark after restoring fixed, lighten the overlay slightly on large screens */
+@media (min-width: 900px) {
+  .page-hero::before {
+    background: rgba(0,0,0,.24);
+  }
+}
