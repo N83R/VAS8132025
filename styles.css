@@ -883,3 +883,46 @@ a:focus {
     position: relative;
     z-index: 2;
 }
+/* universal scaling */
+img, video { max-width: 100%; height: auto; display: block; }
+.page-container, .page-content { width: 100%; padding-inline: 16px; }
+.booking-form input, .booking-form select, .booking-form textarea { width: 100%; }
+
+/* prevent horizontal scrolling */
+html, body { overflow-x: hidden; }
+
+/* slightly smaller hero text on phones */
+@media (max-width: 768px) {
+  .page-hero { min-height: 45vh; }
+  .page-hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .page-hero p  { font-size: clamp(1rem, 3.8vw, 1.15rem); }
+}
+/* desktop nav layout (unchanged if you already use flex) */
+.navbar { display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
+#site-nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
+#site-nav a { display:block; padding:8px 10px; text-decoration:none; }
+
+/* hamburger button (hidden on desktop) */
+.nav-toggle {
+  display:none; background:transparent; border:0; padding:8px; cursor:pointer;
+}
+.nav-toggle span {
+  display:block; width:24px; height:2px; margin:5px 0; background:#fff; /* match your light text color */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-toggle { display:block; }
+
+  /* hide the menu by default on phones */
+  #site-nav { position:absolute; left:0; right:0; top:64px; /* approx navbar height */
+              background:#0d0d0d; border-top:1px solid rgba(255,255,255,.08);
+              max-height:0; overflow:hidden; transition:max-height .25s ease; }
+
+  #site-nav ul { flex-direction:column; }
+  #site-nav li { border-bottom:1px solid rgba(255,255,255,.08); }
+  #site-nav a { padding:14px 16px; }
+
+  /* when toggled open */
+  #site-nav.open { max-height:70vh; }
+}
