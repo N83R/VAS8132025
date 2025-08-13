@@ -1054,3 +1054,25 @@ html, body { overflow-x: hidden; }
     background: rgba(0,0,0,.24);
   }
 }
+footer {
+  background: var(--dark);
+  color: var(--light);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icons {
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+}
