@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surveying &amp; Inspection | Visionary Aerial&nbsp;Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="extension_icon.png">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mapping.html">Mapping</a></li>
+          <li><a href="inspection.html" class="active">Inspection</a></li>
+          <li><a href="spraying.html">Spraying</a></li>
+          <li><a href="quotes.html">Drone Sales &amp; Quotes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-container">
+      <section class="page-hero inspection-hero">
+        <div class="overlay">
+          <h1>Surveying &amp; Inspection</h1>
+          <p style="text-shadow: 2px 2px 4px rgba(0,0,0,1)">
+            High‑definition imagery and modeling for construction sites,
+            infrastructure and hard‑to‑reach assets.
+          </p>
+        </div>
+      </section>
+      <section class="page-content">
+        <h2>Service Overview</h2>
+        <p>
+          Our inspection drones capture crisp, stabilized video and
+          photogrammetric data to inspect job sites, monitor project progress
+          and evaluate infrastructure. Using high‑resolution RGB and multispectral
+          sensors, we create detailed 3D models and orthomosaics that help you
+          detect issues before they become problems.
+        </p>
+        <p>
+          Applications include construction progress monitoring, electrical
+          infrastructure inspection, roof and facade surveys, bridge evaluation
+          and general asset management. Our pilots are trained to operate safely
+          around people, equipment and sensitive structures.
+        </p>
+        <h2>Gallery</h2>
+        <p>
+          See how we visualise complex structures and landscapes using drone
+          imaging and modeling.
+        </p>
+        <div class="gallery-grid">
+          <img src="Solar.png" alt="Job site model" />
+          <img src="stadium multi.png" alt="Infrastructure inspection" />
+          <img src="clock.jpg" alt="Structure survey" />
+        </div>
+        <h2>Request Inspection</h2>
+        <p>
+          Ready to evaluate your assets from a new perspective? Fill out the
+          form below and we will reach out to schedule your flight and tailor
+          the deliverables to your needs.
+        </p>
+        <form class="booking-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="location">Site Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Address or GPS coordinates"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="inspection-type">Inspection Type</label>
+            <select id="inspection-type" name="inspection-type">
+              <option value="construction">Construction</option>
+              <option value="infrastructure">Electrical Infrastructure</option>
+              <option value="structural">Buildings/Structures</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="details">Additional Details</label>
+            <textarea id="details" name="details" rows="4"></textarea>
+          </div>
+          <button type="submit" class="cta-button">Submit Request</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>
+          © <span id="year"></span> Visionary Aerial&nbsp;Solutions, LLC. All rights
+          reserved.
+        </p>
+        <p>Email: support@visionarydroneco.com | Phone: (270) 254‑6144</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,885 @@
+/*
+  Global style sheet for the ag drone company website. The palette is drawn
+  from the company colours (red, black and white) and neutral greys for
+  readability. Layouts use modern CSS features such as flexbox, grid and
+  scroll snapping to create an immersive user experience reminiscent of
+  interactive product pages on high‑end tech sites【10716555550505†L133-L138】.
+*/
+
+:root {
+  --primary: #c6161d; /* vibrant red for calls to action */
+  --dark: #0a0a0a;    /* near‑black used for text and backgrounds */
+  --light: #ffffff;   /* white for contrast */
+  --grey: #f5f5f5;    /* light grey for alternating sections */
+  --max-width: 1100px;
+  --muted: #181818;   /* dark grey used for alternate dark sections */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling for in‑page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary);
+}
+
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav ul li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+  color: var(--light);
+}
+
+.navbar nav ul li a.active {
+  color: var(--primary);
+}
+
+/* Scroll container for the home page */
+.scroll-container {
+  margin-top: 60px; /* offset nav height */
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+
+/* Hero section styling */
+/* The hero uses an abstract aerial view of farmland generated via imagegen
+   (3ad9388d-6ef8-4021-9bb9-3319b3f4434a.png). Replace this file with your
+   own hero image by dropping it into the website folder and updating the
+   filename here. */
+.hero {
+  background: url('3ad9388d-6ef8-4021-9bb9-3319b3f4434a.png') center/cover no-repeat;
+  color: var(--light);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero .overlay {
+  position: relative;
+  max-width: 750px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons,
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-button {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #a40f18;
+}
+
+.cta-button.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.cta-button.outline:hover {
+  background: var(--primary);
+  color: var(--light);
+}
+
+/* Content sections */
+.content-section {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.content-section.alt {
+  background: var(--grey);
+}
+
+.content-section .text {
+  max-width: 700px;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-section p {
+  margin-bottom: 1.5rem;
+}
+
+.cta-section {
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Page layouts */
+.page-container {
+  margin-top: 60px;
+  padding: 0;
+}
+
+.page-hero {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Use a consistent natural background for all subpage hero banners */
+/* Subpage hero backgrounds */
+.mapping-hero {
+  background-image: url('grade_map.png');
+}
+
+.spraying-hero {
+  background-image: url('farmland.jpg');
+}
+
+.quotes-hero {
+  background-image: url('farmland.jpg');
+}
+
+/* Inspection hero background uses a natural farmland still until a video is provided */
+.inspection-hero {
+  background-image: url('farmland.jpg');
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Lighter overlay on subpage hero banners to show the natural background images */
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.page-hero .overlay {
+  position: relative;
+  padding: 0 2rem;
+  max-width: 900px;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+}
+
+.page-content {
+  padding: 4rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.page-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form .form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group select,
+.booking-form .form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.booking-form .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.booking-form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 1rem;
+}
+
+/* Drone cards on quotes page */
+.drone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.drone-card {
+  background: var(--grey);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.drone-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.drone-card p {
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: var(--light);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Utilities for small screens */
+@media (max-width: 600px) {
+  .navbar nav ul {
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+
+/*
+  -------------------------------------------------------------------------
+  New dark‑themed styles and sections for the redesigned homepage. These
+  declarations appear at the end of the stylesheet so they override earlier
+  definitions where necessary. The home page now uses a dark palette by
+  default, with lighter text and muted backgrounds for cards and features.
+*/
+
+/* Override body and link colours for dark theme */
+body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  color: #ff4d4d;
+}
+
+/* Fade‑in animation utility classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark hero */
+.hero-dark {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  /* Use our photographic hero image as the backdrop */
+  background: url('hero_farmland.jpg') center/cover no-repeat;
+  color: var(--light);
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.hero-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Dark overlay for contrast */
+  /* Slightly lighter overlay so the background photo is more visible */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-dark .overlay {
+  position: relative;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.hero-dark h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.hero-dark p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+/* Services Section */
+.services-section {
+  background: var(--dark);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.service-card {
+  background: var(--muted);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--light);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+/* Style for icons on image‑backed service cards */
+.service-card .service-icon {
+  width: 48px;
+  height: 48px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Invert black glyphs and drop brightness to turn icons white on dark backgrounds */
+  filter: brightness(0) invert(1);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--light);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.service-card .cta-link {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.service-card .cta-link:hover {
+  text-decoration: underline;
+}
+
+/* Features Section */
+.features-section {
+  background: var(--muted);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.feature-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.feature-item p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Dark CTA Section */
+.cta-section-dark {
+  background: var(--dark);
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--light);
+}
+
+.cta-section-dark h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section-dark p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* Fleet Section: showcases the drone models we operate */
+.fleet-section {
+  background: var(--muted);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.fleet-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.fleet-card {
+  background: var(--dark);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--light);
+}
+
+.fleet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Mission Section: articulates the company vision over a custom abstract background */
+.mission-section {
+  position: relative;
+  padding: 5rem 1rem;
+  text-align: center;
+  background: var(--dark);
+  /* Use the abstract background pattern for a subtle high-tech feel */
+  background-image: url('abstract_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.mission-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Soft overlay ensures text remains legible over the pattern */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.mission-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.mission-section h2 {
+  color: var(--primary);
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+  color: #ccc;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.fleet-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.fleet-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Fade‑in animation classes used by IntersectionObserver in scripts.js */
+/*
+  The following classes were originally intended to animate elements into view
+  using IntersectionObserver. They now set elements fully visible by default.
+  If you decide to implement custom scroll animations later, you can update
+  these classes accordingly.
+*/
+.before-view,
+.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------------------------
+   Custom additions for Visionary Aerial Solutions
+   This block defines styles for the logo image, hero video backgrounds,
+   gallery grids, spraying page gallery and the drone sales page. It is
+   appended at the end of the stylesheet to override earlier rules as
+   necessary.
+------------------------------------------------------------------------ */
+
+/* Scale the logo image used in the nav bar */
+.navbar .logo img.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Hero video covers the hero section behind the overlay */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Gallery grid used on the mapping page */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Spray gallery styling for the spraying page */
+.spray-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.spray-item {
+  background: var(--muted);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.spray-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.spray-info {
+  padding: 1rem;
+}
+
+.spray-info h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.spray-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Drone sales page styling */
+.drone-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .drone-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .drone-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.drone-detail {
+  background: var(--muted);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.drone-detail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.drone-info {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.drone-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.drone-info ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.drone-info ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.inspection-hero {
+  background-image: url('Inspection.png'); /* your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px; /* adjust to match your design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.inspection-hero h1,
+.inspection-hero p {
+  color: white;
+}
+
+.spraying-hero {
+    position: relative;
+    background-image: url('t40.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.spraying-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.20); /* adjust 0.15–0.25 to control brightness */
+    z-index: 1;
+}
+
+.spraying-hero h1,
+.spraying-hero p {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.quotes-hero {
+    position: relative;
+    background-image: url('spray drone.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.quotes-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.20); /* adjust 0.15–0.25 to control brightness */
+    z-index: 1;
+}
+
+.quotes-hero h1,
+.quotes-hero p {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}

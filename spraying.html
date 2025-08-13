@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aerial Spraying Services | Visionary Aerial&nbsp;Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="extension_icon.png">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mapping.html">Mapping</a></li>
+          <li><a href="inspection.html">Inspection</a></li>
+          <li><a href="spraying.html" class="active">Spraying</a></li>
+          <li><a href="quotes.html">Drone Sales &amp; Quotes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-container">
+      <section class="page-hero spraying-hero">
+        <div class="overlay">
+          <h1>Custom Aerial Spraying</h1>
+          <p style="text-shadow: .5px .75px 6px rgba(0,0,0,1)">
+            Efficient, precise application for row crops, pastures, forestry and
+            wildlife plots using industry‑leading drones.
+          </p>
+        </div>
+      </section>
+      <section class="page-content">
+        <h2>Service Overview</h2>
+        <p>
+          Equipped with DJI T40 and T50 as well as EAVision J100, our drones
+          deliver liquid or solid payloads with variable rate control and
+          centimeter‑level GPS accuracy. We handle herbicides, fungicides,
+          insecticides, liquid fertilizer and seed. Because drones fly low and
+          slow, drift is minimized and coverage uniformity exceeds traditional
+          ground rigs.
+        </p>
+        <p>
+          Each application includes a pre‑flight assessment, flight plan, and
+          post‑spray report documenting treated acres and application rates.
+        </p>
+        <h2>Example Projects</h2>
+        <p>Discover how aerial spraying can benefit various operations. Our fleet treats row crops, pastures and specialty plots with precision and care.</p>
+        <div class="spray-gallery">
+          <div class="spray-item">
+            <img src="hero_farmland.jpg" alt="Row crop spraying" />
+            <div class="spray-info">
+              <h4>Row Crops</h4>
+              <p>Targeted herbicide, fungicide and nutrient applications across corn, soybeans and small grains reduce waste and maximise yields.</p>
+            </div>
+          </div>
+          <div class="spray-item">
+            <img src="Deer.jpg" alt="Pastures & forestry" />
+            <div class="spray-info">
+              <h4>Pastures &amp; Wildlife</h4>
+              <p>Avoid soil compaction and reach rugged areas with drone sprays for pasture rejuvenation, invasive brush control and wildlife food plots.</p>
+            </div>
+          </div>
+          <div class="spray-item">
+            <img src="seed pour.jpg" alt="Specialty applications" />
+            <div class="spray-info">
+              <h4>Specialty Applications</h4>
+              <p>Seed cover crops, replant missed rows and apply nutrients in sensitive forestry settings where ground rigs can’t go.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="margin-top: 1em;">Book Spraying Services</h2>
+        <p>
+          Fill out the form to request aerial spraying. We will follow up to
+          discuss your needs, confirm regulations and schedule your flight.
+        </p>
+        <form class="booking-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="location">Field Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="City, County or GPS coordinates"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="crop">Crop or Land Type</label>
+            <input type="text" id="crop" name="crop" required />
+          </div>
+          <div class="form-group">
+            <label for="acreage">Acreage</label>
+            <input type="number" id="acreage" name="acreage" required />
+          </div>
+          <div class="form-group">
+            <label for="application">Application Type</label>
+            <select id="application" name="application">
+              <option value="herbicide">Herbicide</option>
+              <option value="fungicide">Fungicide</option>
+              <option value="insecticide">Insecticide</option>
+              <option value="fertilizer">Fertilizer</option>
+              <option value="seeding">Seeding</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="details">Additional Details</label>
+            <textarea id="details" name="details" rows="4"></textarea>
+          </div>
+          <button type="submit" class="cta-button">Submit Request</button>
+        </form>
+
+        
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>© <span id="year"></span> Visionary Aerial&nbsp;Solutions, LLC. All rights reserved.</p>
+        <p>Email: support@visionarydroneco.com | Phone: (270) 254‑6144</p>
+      </div>
+    </footer>
+  </body>
+</html>

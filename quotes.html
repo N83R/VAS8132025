@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Sales &amp; Quotes | Visionary Aerial&nbsp;Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="extension_icon.png">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mapping.html">Mapping</a></li>
+          <li><a href="inspection.html">Inspection</a></li>
+          <li><a href="spraying.html">Spraying</a></li>
+          <li><a href="quotes.html" class="active">Drone Sales</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-container">
+      <section class="page-hero quotes-hero">
+        <div class="overlay">
+          <h1>Your Drone. Your Advantage.</h1>
+          <p style="text-shadow: .5px .75px 6px rgba(0,0,0,1)">
+            Whether you’re outfitting a farm or upgrading your existing fleet,
+            we’ll help you choose the right aerial platform and provide a
+            competitive quote on the DJI&nbsp;T40, DJI&nbsp;T50 or EAVision&nbsp;J100.
+          </p>
+        </div>
+      </section>
+      <section class="page-content">
+        <h2>Drone Models</h2>
+        <div class="drone-details">
+          <div class="drone-detail">
+            <img src="t40 sell.png" alt="DJI T40" />
+            <div class="drone-info">
+              <h3>DJI&nbsp;T40</h3>
+              <ul>
+                <li>10.5 gal spray tank with up to 32 ft spray width</li>
+                <li>Coaxial twin rotors deliver lift and stability for 50 kg spread payloads</li>
+                <li>Dual atomized nozzles ensure uniform droplet size and reduce drift</li>
+                <li>RTK-enabled precision flight with obstacle sensing and terrain following</li>
+              </ul>
+            </div>
+          </div>
+          <div class="drone-detail">
+            <img src="T50.png" alt="DJI T50" />
+            <div class="drone-info">
+              <h3>DJI&nbsp;T50</h3>
+              <ul>
+                <li>10.5 gal spray tank and increased payload capacity for maximum throughput</li>
+                <li>Enhanced rotors and wind resistance for improved stability in adverse conditions</li>
+                <li>Expanded 36 ft spray width for large acreage coverage</li>
+                <li>Advanced flight planning and flow control for efficient operations</li>
+              </ul>
+            </div>
+          </div>
+          <div class="drone-detail">
+            <img src="J100.png" alt="EAVision J100" />
+            <div class="drone-info">
+              <h3>EAVision&nbsp;J100</h3>
+              <ul>
+                <li>Rugged design with 11.9 gallon tank and forward‑looking radar and LiDAR</li>
+                <li>Terrain following and 360° obstacle avoidance for challenging environments</li>
+                <li>Ideal for hilly pastures, forestry work and irregular plots</li>
+                <li>Modular system supports spraying, seeding and spreading applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h2>Request Your Quote</h2>
+        <p>
+          Tell us about your needs and we will prepare a customized quote
+          including pricing, training options and support packages.
+        </p>
+        <form class="booking-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="model">Desired Drone Model</label>
+            <select id="model" name="model">
+              <option value="T40">DJI T40</option>
+              <option value="T50">DJI T50</option>
+              <option value="J100">EAVision J100</option>
+              <option value="other">Other/Not sure</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="details">Requirements / Questions</label>
+            <textarea id="details" name="details" rows="4"></textarea>
+          </div>
+          <button type="submit" class="cta-button">Submit Request</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>© <span id="year"></span> Visionary Aerial&nbsp;Solutions, LLC. All rights reserved.</p>
+        <p>Email: support@visionarydroneco.com | Phone: (270) 254‑6144</p>
+      </div>
+    </footer>
+  </body>
+</html>

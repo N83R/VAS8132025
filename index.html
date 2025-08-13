@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visionary Aerial Solutions&nbsp;– Custom Aerial Applications</title>
+    <!--
+      This homepage is designed to give a professional first impression for your
+      aerial application company. The layout takes inspiration from the
+      interactive, scroll‑driven product pages used by leading technology
+      brands. Each section occupies the full height of the browser window and
+      snaps into place as the user scrolls, creating a dynamic, immersive
+      experience. The hero uses a bespoke abstract background (generated
+      separately and included in the assets folder) and highlights your core
+      value proposition. Navigation links in the header allow customers to
+      easily access booking forms for mapping and spraying services or request a
+      quote for drone purchases.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="extension_icon.png">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <!-- Use the supplied logo instead of plain text. The image will scale down on smaller screens. -->
+        <a href="index.html"><img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mapping.html">Mapping</a></li>
+          <li><a href="inspection.html">Inspection</a></li>
+          <li><a href="spraying.html">Spraying</a></li>
+          <li><a href="quotes.html">Drone Sales &amp; Quotes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section -->
+      <section class="hero-dark">
+        <!-- The hero now plays a looping banner video that you can replace by dropping
+             a file named “Banner Vid.mp4” into the site folder. A poster image
+             provides a fallback and displays while the video loads. -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero_farmland.jpg">
+          <source src="Banner Vid.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay">
+          <h1 style="text-shadow: .5px .75px 6px rgba(0,0,0,1)">Visionary Aerial&nbsp;Solutions</h1>
+          <p style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);">
+            Custom aerial applications and surveys for row crops, pastures,
+            forestry and wildlife plots. Experience precision agriculture from above.
+          </p>
+          <div class="hero-buttons">
+            <a href="spraying.html" class="cta-button">Book Spraying</a>
+            <a href="mapping.html" class="cta-button">Book Mapping</a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Services overview -->
+      <section class="services-section fade-in">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <!-- Row crop card with photographic background -->
+          <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('hero_farmland.jpg'); background-size: cover; background-position: center; color: var(--light);">
+            <!-- Icon removed to allow the background photo to take center stage -->
+            <h3>Row Crop</h3>
+            <p style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);">
+              High‑precision spraying for corn, soybeans, cotton and other row
+              crops using DJI&nbsp;T40/T50 and EAVision&nbsp;J100. Variable rate control
+              ensures inputs go where they’re needed.
+            </p>
+            <a style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);" href="spraying.html" class="cta-link">Learn More</a>
+          </div>
+          <!-- Pastures & Forestry card with pasture photo -->
+          <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('pasture_cattle.jpg'); background-size: cover; background-position: center; color: var(--light);">
+            <!-- Icon removed to allow the background photo to take center stage -->
+            <h3>Pastures & Forestry</h3>
+            <p style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);">
+              Overgrown pastures, sensitive forest stands and wildlife food
+              plots benefit from our low‑impact aerial application. Access
+              rugged terrain without compaction.
+            </p>
+            <a style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);" href="spraying.html" class="cta-link">Learn More</a>
+          </div>
+          <!-- Mapping card using farmland image again -->
+          <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('grade_map.png'); background-size: cover; background-position: center; color: var(--light);">
+            <!-- Icon removed to allow the background photo to take center stage -->
+            <h3>Mapping & Survey</h3>
+            <p style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);">
+              Mavic&nbsp;3M multispectral surveys deliver orthomosaics, NDVI maps
+              and stand counts. Monitor crop health and plan variable‑rate
+              applications with confidence.
+            </p>
+            <a style="text-shadow: 2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9);" href="mapping.html" class="cta-link">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why choose us -->
+      <section class="features-section fade-in">
+        <h2>Why Choose Us?</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <h4>Cutting‑Edge Equipment</h4>
+            <p>
+              We operate the latest DJI and EAVision drones including T40, T50
+              and J100 platforms for spraying and a Mavic&nbsp;3M for mapping.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>Precision & Efficiency</h4>
+            <p>
+              GPS‑guided flight paths and real‑time variable rate control
+              minimize drift, reduce waste and maximize coverage efficiency.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h4>Licensed & Insured</h4>
+            <p>
+              FAA Part&nbsp;137 certified pilots with full liability coverage
+              ensure your jobs are completed safely and professionally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fleet section introduces the drones used for applications and surveys -->
+      <section class="fleet-section fade-in">
+        <h2>Cutting-Edge Drones for Your Operation</h2>
+        <div class="fleet-grid">
+          <div class="fleet-card">
+            <h3>DJI&nbsp;T40</h3>
+            <p>The workhorse of our fleet. This multirotor sprayer boasts a 40‑litre tank, high flow rates and precision variable‑rate technology to treat row crops and orchards efficiently.</p>
+          </div>
+          <div class="fleet-card">
+            <h3>DJI&nbsp;T50</h3>
+            <p>An evolution of the T40 platform with increased payload capacity and improved spray distribution. Ideal for large acreage row crops and higher throughput.</p>
+          </div>
+          <div class="fleet-card">
+            <h3>EAVision&nbsp;J100</h3>
+            <p>Specialising in rugged terrain, the J100 offers forward‑looking radar and terrain following to safely deliver inputs on slopes, pastures and forested areas.</p>
+          </div>
+          <div class="fleet-card">
+            <h3>Mavic&nbsp;3M</h3>
+            <p>Our mapping powerhouse. The Mavic&nbsp;3M captures high‑resolution RGB and multispectral imagery for orthomosaics, NDVI maps, stand counts and crop health analysis.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission section: highlights your vision and values -->
+      <section class="mission-section fade-in">
+        <div class="mission-content">
+        <h2>Our Mission</h2>
+        <p>
+          At Visionary Aerial&nbsp;Solutions we’re on a mission to redefine how land
+          managers care for their crops, forests and habitats. We harness
+          cutting‑edge UAV technology to deliver precise applications and
+          actionable insights while minimizing environmental impact.
+        </p>
+        <p>
+          From boosting yields and reducing inputs on row crops to restoring
+          pastures,  stewarding wildlife plots and surveying critical
+          infrastructure, we partner with you to bring the future of farming
+          and land management to life—one flight at a time.
+        </p>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="cta-section-dark fade-in">
+        <h2>Ready to Elevate Your Operation?</h2>
+          <p style="max-width: 800px; margin: auto; text-align: center; margin-bottom: 20px;">
+            Visionary Aerial&nbsp;Solutions combines years of agricultural know-how with state-of-the-art drones to bring you results.
+            Whether you need targeted spraying, multispectral mapping or guidance on your own aircraft purchase, we’re here to help.
+
+          </p>
+
+        <div class="cta-buttons">
+          <a href="spraying.html" class="cta-button">Book Spraying</a>
+          <a href="mapping.html" class="cta-button outline">Book Mapping</a>
+          <a href="quotes.html" class="cta-button">Request Quote</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>
+          © <span id="year"></span> Visionary Aerial&nbsp;Solutions, LLC. All rights reserved.
+        </p>
+        <p>
+          <!-- Replace the placeholder email and phone number below with your
+          own contact information. -->
+          Email: support@visionarydroneco.com | Phone: (270) 254-6144
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
