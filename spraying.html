@@ -78,44 +78,21 @@
           Fill out the form to request aerial spraying. We will follow up to
           discuss your needs, confirm regulations and schedule your flight.
         </p>
-  <form id="contact-form" action="https://formspree.io/f/xblkwnkq" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
+  <form
+  action="https://formspree.io/f/xblkwnkq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
   <button type="submit">Send</button>
-  <p id="form-status"></p>
-  </form>
-
-<script>
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        status.innerText = "Thanks for your message!";
-        form.reset();
-      } else {
-        const result = await response.json();
-        status.innerText = result.error || "Something went wrong.";
-      }
-    } catch (err) {
-      status.innerText = "Network error. Please try again.";
-    }
-  });
-</script>
-
+</form>
 
         
       </section>
