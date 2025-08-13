@@ -857,7 +857,7 @@ a:focus {
 
 .quotes-hero {
     position: relative;
-    background-image: url('Spray Drone.jpg');
+    background-image: url('spray-drone.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -1019,7 +1019,7 @@ html, body { overflow-x: hidden; }
 /* ---------- Per-page hero images (centralized here) ---------- */
 .mapping-hero    { background-image: url('grade_map.png'); }
 .spraying-hero   { background-image: url('t40.jpg'); }
-.quotes-hero     { background-image: url('Spray Drone.jpg'); }
+.quotes-hero     { background-image: url('spray-drone.jpg'); }
 .inspection-hero { background-image: url('Inspection.png'); }
 
 /* Optional: fine-tune on very small phones */
