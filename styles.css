@@ -883,6 +883,7 @@ a:focus {
     position: relative;
     z-index: 2;
 }
+
 /* universal scaling */
 img, video { max-width: 100%; height: auto; display: block; }
 .page-container, .page-content { width: 100%; padding-inline: 16px; }
@@ -897,6 +898,7 @@ html, body { overflow-x: hidden; }
   .page-hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .page-hero p  { font-size: clamp(1rem, 3.8vw, 1.15rem); }
 }
+
 /* desktop nav layout (unchanged if you already use flex) */
 .navbar { display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
 #site-nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
@@ -1017,7 +1019,7 @@ html, body { overflow-x: hidden; }
 /* ---------- Per-page hero images (centralized here) ---------- */
 .mapping-hero    { background-image: url('grade_map.png'); }
 .spraying-hero   { background-image: url('t40.jpg'); }
-.quotes-hero     { background-image: url('spray drone.jpg'); }
+.quotes-hero     { background-image: url('Spray Drone.jpg'); }
 .inspection-hero { background-image: url('Inspection.png'); }
 
 /* Optional: fine-tune on very small phones */
