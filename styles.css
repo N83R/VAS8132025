@@ -1076,3 +1076,16 @@ footer {
   height: 24px;
   width: 24px;
 }
+
+.social-icon {
+  height: 28px;
+  width: 28px;
+}
+
+/* Resize on smaller devices */
+@media (max-width: 768px) {
+  .social-icon {
+    height: 20px;
+    width: 20px;
+  }
+}
