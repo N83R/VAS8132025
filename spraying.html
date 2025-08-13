@@ -11,9 +11,18 @@
   <body>
     <header class="navbar">
       <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" /></a>
+        <a href="index.html">
+          <img src="logo.png" alt="Visionary Aerial Solutions, LLC" class="logo-image" />
+        </a>
       </div>
-      <nav>
+
+      <!-- New: hamburger button (only shows on mobile) -->
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Give nav an id so we can toggle it -->
+      <nav id="site-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="mapping.html">Mapping</a></li>
